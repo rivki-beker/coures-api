@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using web_api_courses.Entities;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -8,6 +9,7 @@ namespace web_api_courses.Controllers
     [ApiController]
     public class PupilController : ControllerBase
     {
+        private static List<Pupil> pupiles = new List<Pupil>();
         // GET: api/<PupilController>
         [HttpGet]
         public IEnumerable<string> Get()
